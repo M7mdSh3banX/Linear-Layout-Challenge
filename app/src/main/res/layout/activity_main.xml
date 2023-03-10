@@ -1,18 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/screenMargin"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/card_background"
+        android:orientation="horizontal"
+        android:padding="@dimen/cardPadding">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/card_image"
+            app:shapeAppearanceOverlay="@style/corneredImage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/cardPadding">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_name"
+                    android:textColor="@color/primaryBlack"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3_hr"
+                    android:paddingStart="@dimen/mPadding"
+                    android:paddingEnd="@dimen/mPadding"
+                    android:paddingTop="@dimen/sPadding"
+                    android:paddingBottom="@dimen/sPadding"
+                    android:textColor="@color/white"
+                    android:background="@drawable/hours_background"
+                    android:textSize="@dimen/body"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/mPadding"
+                android:layout_marginStart="@dimen/cardPadding">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/software_engineer"
+                    android:textColor="@color/secondaryBlack"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/body"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/egyptian"
+                    android:textColor="@color/secondaryBlack"
+                    android:textSize="@dimen/body"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/mPadding"
+                android:layout_marginStart="@dimen/cardPadding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location"
+                    android:layout_marginEnd="@dimen/sPadding"
+                    app:tint="@color/red"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uk"
+                    android:textColor="@color/tertiaryBlack"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/body"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_5_days_ago"
+                    android:textColor="@color/fourthBlack"
+                    android:textSize="@dimen/body"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/mPadding"
+                android:layout_marginStart="@dimen/cardPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_150_reviews"
+                    android:layout_marginEnd="@dimen/sPadding"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/body"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_4_5"
+                    android:textColor="@color/primaryBlack"
+                    android:layout_marginEnd="@dimen/sPadding"
+                    android:textSize="@dimen/body"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rate_star"
+                    android:layout_gravity="center"
+                    app:tint="@color/yellow"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
