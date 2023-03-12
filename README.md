@@ -1,5 +1,5 @@
 # Linear Layout Challenge
-> This challenge solves how to practice with linear layout by creating a card
+> This code represents the layout of a card in an Android app. It is written in XML and defines a LinearLayout containing several nested LinearLayouts and views such as TextViews, ImageViews, and ShapeableImageViews.
 ----
 ## Card demo
 <p align="center">
